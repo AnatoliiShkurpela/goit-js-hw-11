@@ -1,1 +1,108 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fafafa;
+    color: #212121;
+    line-height: 1.5;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  :root {
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 250ms;
+  }
+  .search-form {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+      background-image: repeating-radial-gradient(
+      circle,
+      rgba(128, 83, 128, 0.75),
+      rgba(128, 0, 128, 0.75) 10px,
+      #4b026fae 10px,
+      #4b026fb9 20px
+    );
+  }
+  input {
+    font: inherit;
+    max-width: 320px;
+    margin-bottom: 16px;
+    color: rgb(14, 14, 171);
+    font-size: large;
+    font-style: italic;
+  }
+  button {
+    font: inherit;
+    max-width: 320px;
+    margin-bottom: 16px;
+    color: rgb(14, 14, 171);
+    font-size: large;
+    font-style: italic;
+  }
+  .gallery {
+    margin-top: 100px;
+    display: grid;
+    max-width: 1140px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-auto-rows: 240px;
+    grid-gap: 30px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .gallery__item {
+    position: relative;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  }
+  
+  .gallery__image:hover {
+    transform: scale(1.03);
+  }
+  
+  .gallery__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform var(--animation-duration) var(--timing-function);
+  }
+  
+  .gallery__link {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+  }
+  
+  .gallery__link:hover {
+    cursor: zoom-in;
+  }
+  
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10;
+  }
+  
+  .load-more{
+    margin-top: 35px;
+  }
