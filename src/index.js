@@ -109,13 +109,13 @@ function showMessage(type, message) {
   Notiflix.Notify[type](message);
 }
 
-// function showError() {
-//   showMessage(
-//     typeFailure,
-//     'Sorry, there are no images matching your search query. Please try again.'
-//   );
-//   clearMarkup();
-// }
+function showError() {
+  showMessage(
+    typeFailure,
+    'Sorry, there are no images matching your search query. Please try again.'
+  );
+  clearMarkup();
+}
 
 function showBtn() {
   btnFindMore.hidden = false;
