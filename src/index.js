@@ -115,3 +115,20 @@ function createDataMarkup(hits) {
     );
     clearMarkup();
   }
+  function showBtn() {
+    btnFindMore.hidden = false;
+  }
+  function hiddBtn() {
+    btnFindMore.hidden = true;
+  }
+  
+  function toggleBtn() {
+    btnFindMore.hidden = !btnFindMore.hidden;
+  }
+  
+  function createGallery() {
+    let simpleLightBox = new SimpleLightbox('.gallery__item a', {
+      captionsData: 'alt',
+      captionDelay: 250,
+    }).refresh();
+  }
