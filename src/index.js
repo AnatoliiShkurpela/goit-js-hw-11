@@ -103,3 +103,7 @@ function createDataMarkup(hits) {
   function clearMarkup() {
     gallery.innerHTML = '';
   }  
+
+  function showMessage(type, message) {
+    Notiflix.Notify[type](message);
+  }
