@@ -34,3 +34,27 @@ function onSearch(event) {
     })
     .catch(showError);
 }
+
+function onFindMore() {
+    apiService
+      .fetchFalleryImg()
+      .then(({ hits, totalHits }) => {
+        appendMarkup(hits);
+        createGallery();
+        const { height: cardHeight } = document
+          .querySelector('.gallery')
+          .firstElementChild.getBoundingClientRect();
+        window.scrollBy({
+          top: cardHeight * 2,
+          behavior: 'smooth',
+        });
+        if (apiService.perPage * apiService.page > totalHits) {
+          hiddBtn();
+          showMessage(
+            typeInfo,
+            "We're sorry, but you've reached the end of search results."
+          );
+        }
+      })
+      .catch(showError);
+}
