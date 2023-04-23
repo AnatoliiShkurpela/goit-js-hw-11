@@ -58,3 +58,6 @@ function onFindMore() {
       })
       .catch(showError);
 }
+function appendMarkup(hits) {
+    gallery.insertAdjacentHTML('beforeend', createDataMarkup(hits));
+  }
