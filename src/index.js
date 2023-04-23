@@ -100,4 +100,6 @@ function createDataMarkup(hits) {
       )
       .join(' ');
   }
-  
+  function clearMarkup() {
+    gallery.innerHTML = '';
+  }  
